@@ -1,0 +1,419 @@
+@charset "UTF-8";
+
+/** Regular Font **/
+@font-face {
+	font-family: 'Jost Regular';
+	src: url('../fonts/Jost-Regular.eot');
+	src: local('☺'), url('../fonts/Jost-Regular.woff') format('woff'),
+  url('../fonts/Jost-Regular.ttf') format('truetype'),
+  url('../fonts/Jost-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/** Bold Font **/
+@font-face {
+	font-family: 'Jost Bold';
+	src: url('../fonts/Jost-Bold.eot');
+	src: local('☺'), url('../fonts/Jost-Bold.woff') format('woff'),
+  url('../fonts/Jost-Bold.ttf') format('truetype'),
+  url('../fonts/Jost-Bold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* General CSS */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: "Jost Regular", sans-serif;
+  font-weight: 400;
+  color: #000000;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: #000000;
+}
+
+.seperator {
+  width: 90px;
+  height: 3px;
+  background-color: #000000;
+}
+
+h3.section-title {
+  font-family: "Jost Bold", sans-serif;
+  font-size: 24px;
+  line-height: 35px;
+  text-transform: uppercase;
+  margin: 0 0 4rem;
+}
+
+/* Form CSS */
+.form-control {
+  border-radius: 0;
+}
+
+.form-control:focus {
+  border-color: #000000;
+  box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, .25);
+}
+
+/* Button CSS */
+.btn {
+  border-radius: 0;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  min-width: 140px;
+}
+
+/* Primary Button */
+.btn-primary {
+  background-color: #000000;
+  border-color: #000000;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.btn-primary:hover {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  color: #000000;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show>.btn-primary.dropdown-toggle {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  color: #000000;
+}
+
+.btn-link {
+  color: #7D7D7D;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.btn-link:hover {
+    color: #000000;
+    text-decoration: none !important;
+}
+
+.view-more-icon {
+  background: url('../images/view-more-icon.png') no-repeat center center;
+  background-size: contain;
+  width: 20px;
+  height: 20px;
+  margin-left: 2rem;
+  display: inline-block;
+  vertical-align: middle;
+  opacity: 0.5;
+  -webkit-transition: opacity .15s ease-in-out;
+  transition: opacity .15s ease-in-out;
+}
+
+.btn-link:hover .view-more-icon {
+  opacity: 1;
+}
+
+/* Color CSS */
+.bg-light {
+  background-color: #F0F0F0 !important;
+}
+
+/* Banner CSS */
+.banner {
+  position: relative;
+  overflow: hidden;
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+}
+
+.banner .banner-text-middle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Services Section */
+.services {
+    margin: 4rem 0;
+}
+
+.services .service-list {
+  min-height: 400px;
+  background-color: #F0F0F0;
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 80%;
+  padding: 2rem;
+}
+
+.services .service-list h3.title {
+  font-family: "Jost Bold", sans-serif;
+  font-size: 24px;
+  line-height: 35px;
+  color: #000000;
+}
+
+.services .service-list.service-podcast {
+  background-image: url("../images/podcast.png");
+}
+
+.services .service-list.service-podcast:hover {
+  background-color: rgba(0, 0, 0, 0.85);
+  background-image: url("../images/podcast-black.png");
+}
+
+.services .service-list.service-instagram-live {
+  background-image: url("../images/instagram-live.png");
+}
+
+.services .service-list.service-instagram-live:hover {
+  background-color: rgba(0, 0, 0, 0.85);
+  background-image: url("../images/instagram-live-black.png");
+}
+
+.services .service-list.service-video {
+  background-image: url("../images/video.png");
+}
+
+.services .service-list.service-video:hover {
+  background-color: rgba(0, 0, 0, 0.85);
+  background-image: url("../images/video-black.png");
+}
+
+.services .service-list:hover h3.title,
+.services .service-list:hover p.copy {
+  color: #ffffff;
+}
+
+/* Events Section */
+.events {
+  margin: 4rem 0;
+}
+
+.event-title {
+  padding: 4rem;
+  background-color: #F0F0F0;
+}
+
+.events .carousel h4.title {
+  font-family: "Jost Bold", sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.events .carousel-caption {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    color: #000000;
+    text-align: left;
+}
+
+.events .carousel-control-prev,
+.events .carousel-control-next {
+  width: auto;
+}
+
+.events .carousel-control-next-icon,
+.events .carousel-control-prev-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.events .carousel-control-next {
+    right: 40px;
+    top: auto;
+    bottom: -50px;
+    left: auto;
+}
+
+.events .carousel-control-prev {
+    left: auto;
+    right: 80px;
+    top: auto;
+    bottom: -50px;
+}
+
+.events .carousel-control-prev-icon {
+  background-image: url('../images/icon-arrow-left.png');
+}
+
+.events .carousel-control-next-icon {
+  background-image: url('../images/icon-arrow-right.png');
+}
+
+.events .carousel-inner .carousel-item.active,
+.events .carousel-inner .carousel-item-next,
+.events .carousel-inner .carousel-item-prev {
+    display: flex;
+}
+
+.events .carousel-inner .carousel-item-right,
+.events .carousel-inner .carousel-item-left {
+    transform: translateX(0);
+}
+
+/* Contact US CSS */
+.contact-us {
+  background-color: #000000;
+  padding: 4rem 0;
+  color: #ffffff;
+}
+
+.contact-us form {
+  background-color: #ffffff;
+  margin-top: 2rem;
+  padding: 3rem 4rem;
+  color: #000000;
+}
+
+/* Footer CSS */
+footer {
+  background-color: #ffffff;
+  position: relative;
+  padding: 4rem 0;
+}
+
+footer .footer-left h3.title {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+footer .copyright {
+  font-size: 12px;
+}
+
+footer ul.social-links li .social-icon {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  background-size:contain;
+  opacity: 0.5;
+  -webkit-transition: opacity .15s ease-in-out;
+  transition: opacity .15s ease-in-out;
+}
+
+footer ul.social-links li .social-icon.instagram {
+  background-image: url("../images/instagram.png");
+}
+
+footer ul.social-links li .social-icon.twitter {
+  background-image: url("../images/twitter.png");
+}
+
+footer ul.social-links li .social-icon.facebook {
+  background-image: url("../images/facebook.png");
+}
+
+footer ul.social-links li a:hover .social-icon {
+  opacity: 1;
+}
+
+footer .newsletter-form h5 {
+  font-weight: 600;
+}
+
+footer .newsletter-form .form-inline .form-control {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+footer .newsletter-form .form-inline .input-group-btn {
+  right: 6px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 4;
+}
+
+footer .newsletter-form .form-inline .btn-primary:hover,
+.contact-us .contact-form .btn-primary:hover {
+  border-color: #000000;
+}
+
+/*********************************************************************/
+/* Typed JS https://github.com/mattboldt/typed.js/ */
+/*********************************************************************/
+
+/* Cursor */
+.typed-cursor,
+#logo-typed {
+  font-size: 2.5rem;
+}
+
+/* If fade out option is set */
+.typed-fade-out {
+}
+
+/*********************************************************************/
+/* Media Query */
+/*********************************************************************/
+@media (min-width: 768px) {
+  .events .carousel-inner .carousel-item-right.active,
+  .events .carousel-inner .carousel-item-next {
+      transform: translateX(50%);
+  }
+
+  .events .carousel-inner .carousel-item-left.active,
+  .events .carousel-inner .carousel-item-prev {
+      transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .banner .banner-text-middle {
+    height: 300px;
+  }
+
+  .typed-cursor,
+  #logo-typed {
+    font-size: 1.5rem;
+  }
+
+  .events .carousel-inner .carousel-item,
+  .events .carousel-caption {
+    text-align: center;
+  }
+
+  .events .carousel-inner .carousel-item > div {
+      display: none;
+  }
+
+  .events .carousel-control-next {
+    right: 0;
+    left: 40px;
+  }
+
+  .events .carousel-control-prev {
+    right: 40px;
+    left: 0;
+  }
+
+  .events .carousel-inner .carousel-item > div:first-child {
+      display: block;
+  }
+
+  .contact-us form {
+    padding: 1rem;
+  }
+
+  footer {
+    text-align: center;
+  }
+}
