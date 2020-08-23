@@ -40,6 +40,18 @@ html, body {
   -webkit-tap-highlight-color: #000000;
 }
 
+a {
+	color: #ffffff;
+	text-decoration: underline;
+	-webkit-transition: all .15s ease-in-out;
+	transition: all .15s ease-in-out;
+}
+
+a:hover {
+	color: #ffffff;
+	opacity: 0.5;
+}
+
 .seperator {
   width: 90px;
   height: 3px;
